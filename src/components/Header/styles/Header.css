@@ -1,0 +1,55 @@
+.navHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 2%;
+}
+
+.navHeaderLeft {
+  flex: 0 0 auto;
+}
+
+.navHeaderCenter {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 30%;
+  justify-content: space-between;
+  display: flex;
+}
+
+.navHeader a {
+  color: var(--white-text);
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+}
+
+.navHeaderLeft {
+  color: var(--light-blue-border) !important;
+
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.credentialsIcon{
+  width: 60px;
+  height: 60px;
+  fill: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.credentialsIcon .icon{
+  transform: scale(2);
+  /* transform-origin: center; */
+}
+.credentialsIcon .icon:hover{
+  cursor: pointer;
+}
