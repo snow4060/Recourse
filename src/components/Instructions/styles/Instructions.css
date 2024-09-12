@@ -1,0 +1,40 @@
+.instructions{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.highlight {
+    color: var(--text-highlight);
+    display: inline;
+}
+
+.instructions .buttonsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4%;
+    justify-content: space-evenly;
+}
+
+.instructions button{
+    background-color: var(--light-blue-border);
+    border: none;
+    color: var(--white-text);
+    padding: 1em;
+    border-radius: 8px;
+}
+
+.instructions button:hover{
+    cursor: pointer;
+}
+
+.instructions button:active{
+    background-color: var(--light-blue-accent);
+}
+
+.instructionExamplePicture{
+    max-height: 80vh;
+    max-width: 80vw;
+}

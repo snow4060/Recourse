@@ -2,9 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import "./styles/CredentialsBox.css";
 import useModal from "../Modal/hooks/useModal";
 import { getLoginCredentials, setLoginCredentials } from "../../util/loginCredentials";
+import { Link } from "react-router-dom";
 
 function CredentialsBox() {
-  const { open } = useModal();
+  const { open, setOpen } = useModal();
   const [savedCredentialsLoaded, setSavedCredentialsLoaded] = useState(false);
 
   const JSessionIDBoxRef = useRef<HTMLInputElement>(null);
@@ -32,14 +33,16 @@ function CredentialsBox() {
   }, [open]);
 
   return (
-    <>
+    <div className="credentialsBox">
       <p className="whiteText credentialsBoxText">JSessionID</p>
       <input type="text" className="credentialsBoxInput" disabled={!savedCredentialsLoaded} ref={JSessionIDBoxRef} />
       <p className="whiteText credentialsBoxText">AWSALB</p>
       <input type="text" className="credentialsBoxInput" disabled={!savedCredentialsLoaded} ref={AWSALBBoxRef} />
       <p className="whiteText credentialsBoxText">shib_idp_session</p>
       <input type="text" className="credentialsBoxInput" disabled={!savedCredentialsLoaded} ref={shib_idp_sessionRef} />
-    </>
+      <br /> <br />
+      <Link to="/instructions" onClick={() => setOpen(false)}>Instructions</Link>
+    </div>
   );
 }
 
